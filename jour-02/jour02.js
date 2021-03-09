@@ -67,3 +67,37 @@ if (password.length>5 && password.length==6) {
 } else {
     console.log("Nothing is good");
 }
+
+
+// Bonus
+
+var min = 1;
+var max = 6;
+var random = Math.floor(Math.random() * (6 - 1 + 1) + min);
+
+if (random) {
+    console.log("So close...");
+}
+
+
+
+
+// Bonus II 
+
+var month = "January";
+
+
+switch (month) {
+	case "": 
+		console.log("Spring");
+		break;
+	case "": 
+		console.log("Summer");
+		break;
+	case "": 
+		console.log("Autumn");
+		break;
+	case "": 
+		console.log("Fall");
+		break;
+}
