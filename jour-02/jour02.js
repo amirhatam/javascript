@@ -88,16 +88,42 @@ var month = "January";
 
 
 switch (month) {
-	case "": 
+	case "April": 
 		console.log("Spring");
 		break;
-	case "": 
+	case "February": 
+		console.log("Spring");
+		break;
+	case "May": 
+		console.log("Spring");
+		break;
+	case "July": 
 		console.log("Summer");
 		break;
-	case "": 
+	case "August": 
+		console.log("Summer");
+		break;
+	case "September": 
+		console.log("Summer");
+		break;
+    case "October":    
 		console.log("Autumn");
 		break;
-	case "": 
+	case "November": 
+		console.log("Autumn");
+		break;
+    case "December": 
+		console.log("Autumn");
+		break;
+    case "January": 
+		console.log("Fall");
+		break;
+    case "February": 
+		console.log("Fall");
+		break;
+    case "March": 
 		console.log("Fall");
 		break;
 }
+
+// Bonus III
