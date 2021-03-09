@@ -127,3 +127,17 @@ switch (month) {
 }
 
 // Bonus III
+
+var roundedNumber = 3.6;
+var test1 = Math.floor(roundedNumber);
+var test2
+
+
+
+if (Math.floor(roundedNumber)) {
+    console.log(Math.floor(roundedNumber));
+} if {
+    console.log(Math.ceil(roundedNumber));
+} else {
+    console.log(Math.round(roundedNumber));
+}
