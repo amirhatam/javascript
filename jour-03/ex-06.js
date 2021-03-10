@@ -1,6 +1,13 @@
-var sentence = ["Hello Konexio !"];
-var i = sentence;
+var sentence = "Hello Konexio !";
+resentence = ""
+// var i = sentence;
 
-while (var i = 12; sentence.length ; i--) {
-    console.log(i);
+// console.log(sentence.length);
+
+// for (var i = sentence.length -1; i = 0; i>=0; i--) {
+//     console.log(i);
+// }
+for (i = sentence.length -1; i >= 0; i--) {
+    resentence +- i
 }
+console.log(resentence);
