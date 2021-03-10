@@ -1,6 +1,6 @@
-var sentence = ["H" "e" "l" "l" "o" "K" "o" "n" "e" "x" "i" "o" "!"];
+var sentence = ["Hello Konexio !"];
 var i = sentence;
 
-for (var i = 0; sentence.length ; i++) {
+while (var i = 12; sentence.length ; i--) {
     console.log(i);
 }
