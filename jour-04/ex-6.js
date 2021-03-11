@@ -1,20 +1,32 @@
 
+function format(second) {
+    var minutes = Math.floor(time / 60);
+    var second = time - minutes * 60;
+    var hours = Math.floor(time / 3600);
+    time = time - hours * 3600;
 
-function format (second) {
+    console.log("second :", second);
 
-    console.log("second :",second);
-    // var enSeconde =(heure * 3600) + (minute * 60) + seconde;
-   
-    var h = Math.floor(d / 3600);
-    var m = Math.floor(d % 3600 / 60);
-    var s = Math.floor(d % 3600 % 60);
-
-    var hDisplay = h > 0 ? h + (h == 1 ? " hour, " : " hours, ") : "";
-    var mDisplay = m > 0 ? m + (m == 1 ? " minute, " : " minutes, ") : "";
-    var sDisplay = s > 0 ? s + (s == 1 ? " second" : " seconds") : "";
-    return hDisplay + mDisplay + sDisplay; 
 }
 
-format (3700);
+format(3700);
 
+// function format(time) {   
+    
+//     var hrs = ~~(time / 3600);
+//     var mins = ~~((time % 3600) / 60);
+//     var secs = ~~time % 60;
+
+    
+//     var ret = "";
+//     if (hrs > 0) {
+//         ret += "" + hrs + ":" + (mins < 10 ? "0" : "");
+//     }
+//     ret += "" + mins + ":" + (secs < 10 ? "0" : "");
+//     ret += "" + secs;
+//     console.log("second :"time);
+    
+// }
+
+// console.log("second :"time(3700));
 
