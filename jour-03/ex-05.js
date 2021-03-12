@@ -6,7 +6,7 @@ for (var i = 0; i <= limit; i++) {
   
   // total = total + i;
   total += i;
-
+  
   console.log(i);
 }
 console.log(total);

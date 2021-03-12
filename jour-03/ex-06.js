@@ -1,8 +1,27 @@
-var sentence = "Hello Konexio !";
-var cele = [];
+var sentence = "Hello Konexio !"
 
-for (var i=sentence.length-1; i>=0; i--) {
-    cele.push(sentence[i]);
+var myArray = sentence.split("");
+
+
+var result = [];
+
+for (var i = 0; i < myArray.length; i++) {
+    var item = myArray[i];
+
+    result.unshift(item); 
 }
-console.log(cele.join(""));
+
+
+console.log(result.join(""));
+
+
+
+
+// var sentence = "Hello Konexio !";
+// var cele = [];
+
+// for (var i=sentence.length-1; i>=0; i--) {
+//     cele.push(sentence[i]);
+// }
+// console.log(cele.join(""));
 

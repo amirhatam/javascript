@@ -1,7 +1,8 @@
-let i = 0;
+var limit = 100;
 
-while (i < 100) {
-i++;
+
+for  (var i = 0; i < 100; i++) {
+
 if(i % 15 === 0) {
     console.log("fizzbuzz");
 }
