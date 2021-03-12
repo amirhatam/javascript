@@ -31,11 +31,14 @@ console.log(food);
 // 06 - Up and Down
 
 var basic = "this is Cool";
-var basicUp = "this is Cool";
-var basicDown = "this is Cool";
+var basic = basicUp.toUpperCase();
+var basic = basicDown.toLowerCase();
+// var basicUp = "this is Cool";
+// var basicDown = "this is Cool";
 
 
-console.log(basic + " " +  basicUp.toUpperCase() + " " + basicDown.toLowerCase());
+// console.log(basic + " " +  basicUp.toUpperCase() + " " + basicDown.toLowerCase());
+console.log(basic, basicUp, basicDown);
 
 // 07 - Split 
 
@@ -49,7 +52,4 @@ console.log(letters.split(""));
 var age = 34;
 var temlate = "I'm " + age + " years old";
 
-console.log(temlate)
-
-// Bonus
-
+console.log(temlate);

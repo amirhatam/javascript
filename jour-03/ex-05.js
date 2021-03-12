@@ -1,8 +1,13 @@
 var total = 0;
 var limit = 10;
-var i = total;
 
-while (i <= 10 ) {
-    console.log(i);
-    i++
+
+for (var i = 0; i <= limit; i++) {  
+  
+  // total = total + i;
+  total += i;
+
+  console.log(i);
 }
+console.log(total);
+

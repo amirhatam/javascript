@@ -15,9 +15,9 @@ console.log(stringfied);
 // 03 - Round
 
 var num = 1.5;
-var rounded = num;
+var rounded = Math.round(rounded);
 
-console.log(Math.round(rounded));
+console.log(rounded);
 
 // 04 - Arithmétique
 
@@ -44,6 +44,17 @@ console.log(test==bis);
 console.log(test===bis);
 console.log(test!=bis);
 console.log(test!==bis);
+
+// 06
+
+var limit = 50;
+
+var sccore = 64;
+
+if (score >= limit) {
+	console.log("Ok good")
+} else ("Oh noooo")
+
 
 // 07 - Condition II 
 
@@ -75,8 +86,10 @@ var min = 1;
 var max = 6;
 var random = Math.floor(Math.random() * (6 - 1 + 1) + min);
 
-if (random) {
-    console.log("So close...");
+if (random==max) {
+    console.log("Yes I win !")
+} else {
+	console.log("So close...");
 }
 
 
@@ -126,15 +139,15 @@ switch (month) {
 		break;
 }
 
-// Bonus III
+Bonus III
 
 var roundedNumber = 3.6;
 var test1 = Math.floor(roundedNumber);
-var test2
+var test2 = 
 
 
 
-if (Math.floor(roundedNumber)) {
+if (0.6>=0.5) {
     console.log(Math.floor(roundedNumber));
 } if {
     console.log(Math.ceil(roundedNumber));
