@@ -1,17 +1,35 @@
-var number1 = 10;
-var number2 = 20;
+function compare(num1, num2) {
+    num1 = 2;
+    num2 = 5;
 
-
-function compare (num1, num2) {
-    console.log(number1);
-    console.log(number2);
-    if (number1 > number2) {
+    if (num1 > num2) {
         console.log("num1 is bigger");
-    } else if (number1 < number2) {
+    } else if (num1 < num2) {
         console.log("num2 is bigger");
     } else {
-       console.log("both are the same");
+        console.log("both are the same");
     }
 }
-
 compare();
+
+
+
+// var number1 = 10;
+// var number2 = 20;
+
+
+// function compare (num1, num2) {
+//     console.log(number1);
+//     console.log(number2);
+//     if (number1 > number2) {
+//         console.log("num1 is bigger");
+//     } else if (number1 < number2) {
+//         console.log("num2 is bigger");
+//     } else {
+//        console.log("both are the same");
+//     }
+// }
+
+// compare();
+
+

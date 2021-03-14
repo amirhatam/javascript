@@ -1,5 +1,5 @@
 function checkIfEven(num) {
-    // num = Math.random();
+    
     if (num % 2 === 0) {
         console.log("even");
     } else {
@@ -7,5 +7,4 @@ function checkIfEven(num) {
     }
 }
 
-checkIfEven(2);
-// checkIfEven(Math.random());
+checkIfEven(3);
