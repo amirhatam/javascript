@@ -19,6 +19,7 @@ function multiply(num) {
 multiply();
 
 
+
 // function multiply(num){
 //     var num = process.argv[2]
 
