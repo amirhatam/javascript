@@ -1,0 +1,10 @@
+
+function checkPal (pal) {
+
+
+
+
+
+}
+
+checkPal

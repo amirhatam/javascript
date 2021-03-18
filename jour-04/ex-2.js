@@ -15,4 +15,4 @@ var cat2 = {
 var cats = [cat, cat2];
 
 console.log("age", cat.age);
-console.log("cat2 is cute :", cat["isCute"]);
+console.log("cat2 is cute :", cat2["isCute"]);
