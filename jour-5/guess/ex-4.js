@@ -1,38 +1,60 @@
 var prompt = require("prompt");
 
-var properties = [
-    {
-        name: "username",
-        validator: /^[a-zA-Z\s\-]+$/,
-        warning: "Le username ne doit contenir que des lettres, espaces et tirets"
-    },
+// prompt.start();
 
-]
+var mysteryNum = Math.floor(Math.random() * 100 + 1);
+
+// console.log(mysteryNum);
 
 
+function play() {
+
+    prompt.get(
+        {
+            name: "numUser",
+
+            discriotion: "Quel est le nombre mystère ?"
+        },
+    
+        function (err, res) {
+
+            if (res.numUser.search(/^[1-9][0-9]?$|^100$/g) === -1) {
+                err = "The value is not a number between 1 and 100";
+            }
+
+           if (err) {
+
+               console.log("Error",err);
+
+               play();
+
+               return;
+           } 
+           if (res.numUser<mysteryNum) {
+               console.log("C'est plus !");
+               play();
+           }
+           else if (res.numUser>mysteryNum) {
+
+               console.log("C'est moin !")
+
+               play();
+
+           } 
+           else {
+        
+               console.log("Bravo !!!")
+           }
+            
+
+        }
+)
 
 
-// prompt.start();  // démarre le prompt
+}
+
+play();
 
 
 
 
-
-
-
-
-
-// var mysteryNum = Math.floor(Math.random()*(100-1)+1);
-// function play (){
-//     var play = Math.floor(Math.random()*(100-1)+1);
-//     if (play === mysteryNum){
-//         console.log("bravo")
-//     }else if (play<mysteryNum){
-//         console.log("c'est plus")
-//     }else if (play>mysteryNum){
-//         console.log("c'est moins")
-//     }else{
-//         console.log("error")
-//     }
-// }
-// play()
