@@ -1,40 +1,38 @@
-function multiply(num) {
-
+function multiply (arg) {
     var max = 10;
 
     for (var i = 1; i <= max; i++) {
 
-
+        
         console.log(parseInt(process.argv.slice(2)) * i);
-
-
-
     }
+
+
 
 }
 
-multiply();
 
-function addition(num) {
 
+function addition (arg) {
     var max = 10;
 
     for (var i = 1; i <= max; i++) {
 
-
+        
         console.log(parseInt(process.argv.slice(2)) + i);
-
-
-
     }
+
+
 
 }
 
-addition();
 
 
 
-    module.exports = {
-        multiply,
-        addition
-    };
+module.exports = {
+
+    multiply,
+    addition,
+};
+
+

@@ -3,13 +3,14 @@ function checkProfile() {
 
     var prompt = require("prompt");
 
+    
     var properties = [
         {
             name: "username",
 
-            validator: /[a-z0-9-]/mg, 
+            validator: /[a-z0-9-]/mig, 
 
-            // warning: "Le username ne doit contenir que des lettres, espaces et tirets"
+            warning: "Le username ne doit contenir que des lettres, espaces et tirets"
         
         },
         {

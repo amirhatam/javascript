@@ -1,23 +1,29 @@
-function countEach(letters) {
+function countEach(str) {
 
+    var countO = 0;
+    var countX = 0;
 
+    for (var i = 0; i < str.length; i++) {
 
-    var value = letters;
+        switch (str.charAt(i)) {
 
-    if (value === "xo") {
-        console.log(true);
-    } else {
-        console.log(false)
+            case "x": {
+                countX++;
+                break;
+            }
+            case "o": {
+                countO++;
+                break;
+            }
+
+        }
     }
 
+   
 
-    // console.log(value);
+    return countX === countO;
 
 }
 
 
-countEach("xo");
-
-
-
-03 - Palindrome
+console.log(countEach("xo"));
