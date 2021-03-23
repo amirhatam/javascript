@@ -34,9 +34,9 @@ var soldOut = cakes.filter(function(sold){
 
 });
 
-soldOut.map(function(y) {
+soldOut.map(function(elem) {
 
-    return y.status = "sold out"
+    return elem.status = "sold out"
 })
 
 console.log(soldOut);
