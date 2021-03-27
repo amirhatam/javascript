@@ -1,83 +1,3 @@
-// var grid = [
-//   [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-//   [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-//   [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-//   [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-//   [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-//   [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-//   [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-//   [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-//   [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
-//   [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
-// ];
-
-// let rover = {
-//   direction: "N",
-//   x: 0,
-//   y: 0,
-// };
-
-// function turnLeft() {
-//   switch (rover.direction) {
-//     case "N":
-//       rover.direction = "W";
-//       console.log("Mars Rover is now West " + rover.direction);
-//       break;
-
-//     case "W":
-//       rover.direction = "S"
-//       console.log("Mars Rover is now South " + rover.direction);
-//       break;
-
-//     case "E":
-//       rover.direction = "N";
-//       console.log("Mars Rover is now Nord " + rover.direction);
-//       break;
-
-//     case "S":
-//       rover.direction = "E";
-//       console.log("Mars Rover is now East " + rover.direction);
-//       break;
-
-//     default:
-//       console.log("this is not a valid .");
-//   }
-// }
-
-// function turnRight() {
-//   switch (rover.direction) {
-//     case "N":
-//       rover.direction = "E";
-//       console.log("Mars Rover is now East " + rover.direction);
-//       break;
-
-//     case "E":
-//       rover.direction = "S";
-//       console.log("Mars Rover is now South " + rover.direction);
-//       break;
-
-//     case "S":
-//       rover.direction = "W";
-//       console.log("Mars Rover is now West " + rover.direction);
-//       break;
-
-//     case "W":
-//       rover.direction = "N";
-//       console.log("Mars Rover is now North " + rover.direction);
-//       break;
-//   }
-// }
-
-
-// turnLeft();
-// turnLeft();
-// turnLeft();
-// turnLeft();
-
-
-
-
-
 
 var grid = [
   [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
@@ -95,100 +15,175 @@ var grid = [
 var rover = {
   direction: "N",
   x: 0,
-  y: 0
- 
+  y: 0,
+  travelLog: []
 };
 
-function turnLeft(obj){
-  switch(obj.direction) {
+function turnLeft(elem) {
+  switch (rover.direction) {
     case "N":
-    obj.direction = "W";
-    console.log("Mars Rover is now West " + obj.direction);
-    break;
+      rover.direction = "W";
+      console.log("Mars Rover is now West " + rover.direction);
+      break;
 
     case "W":
-    obj.direction = "S"
-    console.log("Mars Rover is now South " + obj.direction);
-    break;
+      rover.direction = "S"
+      console.log("Mars Rover is now South " + rover.direction);
+      break;
 
     case "E":
-    obj.direction = "N";
-    console.log("Mars Rover is now Nord " + obj.direction);
-    break;
-    
+      rover.direction = "N";
+      console.log("Mars Rover is now Nord " + rover.direction);
+      break;
+
     case "S":
-    obj.direction = "E";
-    console.log("Mars Rover is now East " + obj.direction);
-    break;
-      
+      rover.direction = "E";
+      console.log("Mars Rover is now East " + rover.direction);
+      break;
+
     default:
-    console.log("this is not a valid .");
+      console.log("this is not a valid .");
   }
 }
 
-function turnRight(obj){
-  switch(obj.direction) {
+function turnRight(elem) {
+  switch (rover.direction) {
     case "N":
-      obj.direction = "E";
-      console.log("Mars Rover is now East " + obj.direction);
+      rover.direction = "E";
+      console.log("Mars Rover is now East " + rover.direction);
       break;
 
     case "E":
-      obj.direction = "S";
-      console.log("Mars Rover is now South " + obj.direction);
+      rover.direction = "S";
+      console.log("Mars Rover is now South " + rover.direction);
       break;
-    
+
     case "S":
-      obj.direction = "W";
-      console.log("Mars Rover is now West " + obj.direction);
+      rover.direction = "W";
+      console.log("Mars Rover is now West " + rover.direction);
       break;
-      
+
     case "W":
-     obj.direction = "N";
-      console.log("Mars Rover is now North " + obj.direction);
+      rover.direction = "N";
+      console.log("Mars Rover is now North " + rover.direction);
       break;
   }
 }
 
 
-turnLeft(rover);
-turnLeft(rover);
-turnLeft(rover);
-turnLeft(rover);
-
-function moveForward(obj){
- 
- obj.x = 1
- obj.y = 1
- obj.direction = "E"
-
-console.log(obj)
-
-}
-moveForward(rover)
-
-var left = "l";
-var right = "r";
-var forward = "f";
-
-function pilotRover(str){
+turnRight();
+turnRight();
+turnRight();
+turnRight();
 
 
-for( var i = 1; i >= str.length - 1; i++){
+
+
+function moveForward() {
+  var xIncrease = 0;
+  var yIncrease = 0;
+  rover.travelLog.push({ x: rover.x, y: rover.y })
+
   
-  console.log(i)
-  if( i = left){
-    console.log("l", turnLeft(rover))
+
+  if (rover.direction = "N") {
+    yIncrease = 1;
+    console.log("Mars Rover is now at position " + "[" + rover.x + ", " + rover.y + "]");
+    console.log("", rover.travelLog);
   }
-  else if( i = right){
-    console.log("r", turnRight(rover))
+  else if (rover.direction = "E") {
+    xIncrease = 1;
+    console.log("Mars Rover is now at position " + "[" + rover.x + ", " + rover.y + "]");
+    // console.log(rover.travelLog);
   }
-  else if( i = forward){
-    console.log("f", moveForward(rover))
+  else if (rover.direction = "S") {
+    yIncrease = 1;
+    console.log("Mars Rover is now at position " + "[" + rover.x + ", " + rover.y + "]");
+    // console.log(rover.travelLog);
   }
-  else{
-    console.log("error")}
+  else if (rover.direction = "W") {
+    xIncrease = 1;
+    console.log("Mars Rover is now at position " + "[" + rover.x + ", " + rover.y + "]");
+    // console.log(rover.travelLog);
+  }
+
+  rover.x = rover.x + xIncrease;
+  rover.y = rover.y + yIncrease;
 }
 
+
+moveForward();
+moveForward();
+moveForward();
+moveForward();
+
+
+
+function pilotRover(move) {
+
+
+  // var max = 10
+
+  for (var i = 0; i < move.length; i++) {
+
+
+    console.log(move[i])
+
+    switch (move[i]) {
+      case "l":
+        turnLeft();
+        break;
+
+      case "r":
+        turnRight();
+        break;
+
+      case "f":
+        moveForward();
+        break;
+
+      default:
+        console.log("this is not a valid .");
+    }
+  }
 }
-pilotRover("r")
+// pilotRover("ll");
+
+
+
+
+var prompt = require("prompt");
+
+
+prompt.start();
+
+function displayPrompt() {
+
+  prompt.get({
+    name: "pilotRover",
+    description: "Move Mars Rover with the letters(l, r , f)",
+    // validator: /[a-zA-Z]{1,6}/g
+  },
+
+
+
+    function (err, res) {
+
+      if (res.pilotRover === "l") {
+        return pilotRover("l")
+        // console.log(pilotRover("l"))
+
+      } else if (res.pilotRover === "r") {
+        return pilotRover("r")
+      }
+      else if (res.pilotRover === "f") {
+        return pilotRover("f")
+      }
+      else {
+        console.log("this is not a valid .");
+      }
+    });
+}
+
+displayPrompt()
+
