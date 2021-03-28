@@ -84,7 +84,7 @@ function moveForward() {
   var yIncrease = 0;
   rover.travelLog.push({ x: rover.x, y: rover.y })
 
-  
+
 
   if (rover.direction = "N") {
     yIncrease = 1;
@@ -112,10 +112,49 @@ function moveForward() {
 }
 
 
-moveForward();
-moveForward();
-moveForward();
-moveForward();
+function moveBackward() {
+  var xIncrease = 0;
+  var yIncrease = 0;
+  rover.travelLog.push({ x: rover.x, y: rover.y })
+
+
+
+  if (rover.direction = "N") {
+    yIncrease = -1;
+    console.log("Mars Rover is now at position " + "[" + rover.x + ", " + rover.y + "]");
+    console.log("", rover.travelLog);
+  }
+  else if (rover.direction = "E") {
+    xIncrease = 1;
+    console.log("Mars Rover is now at position " + "[" + rover.x + ", " + rover.y + "]");
+    // console.log(rover.travelLog);
+  }
+  else if (rover.direction = "S") {
+    yIncrease = 1;
+    console.log("Mars Rover is now at position " + "[" + rover.x + ", " + rover.y + "]");
+    // console.log(rover.travelLog);
+  }
+  else if (rover.direction = "W") {
+    xIncrease = 1;
+    console.log("Mars Rover is now at position " + "[" + rover.x + ", " + rover.y + "]");
+    // console.log(rover.travelLog);
+  }
+
+  rover.x = rover.x + xIncrease;
+  rover.y = rover.y + yIncrease;
+}
+
+
+// moveForward();
+// moveForward();
+// moveForward();
+// moveForward();
+
+
+// moveBackward();
+// moveBackward();
+// moveBackward();
+// moveBackward();
 
 
 
@@ -142,12 +181,16 @@ function pilotRover(move) {
         moveForward();
         break;
 
+      case "y":
+        moveBackward();
+        break;
+
       default:
         console.log("this is not a valid .");
     }
   }
 }
-// pilotRover("ll");
+pilotRover("")
 
 
 
@@ -161,27 +204,41 @@ function displayPrompt() {
 
   prompt.get({
     name: "pilotRover",
-    description: "Move Mars Rover with the letters(l, r , f)",
-    // validator: /[a-zA-Z]{1,6}/g
+    description: "Move Mars Rover with the letters(l, r , f, y)",
+    validator: /[rfly]/m,
   },
+  
+  
+  function (err, res) {
+    
+    // var min = 0;
+    // var max = 10;
+    
+  
+      // for (var i = 0; i<res.length; i++) {
 
+pilotRover(res.pilotRover.substring(0))
+        // console.log('#')
 
+        if (res.pilotRover.indexOf === "l") {
+          return pilotRover("l")
+         
+        } else if (res.pilotRover.indexOf === "r") {
+          return pilotRover("r")
+        }
+        else if (res.pilotRover.indexOf === "f") {
+          return pilotRover("f")
+        }
+        else if (res.pilotRover.indexOf === "y") {
+          return pilotRover("y")
+        }
+        else {
+          // console.log(err);
+          displayPrompt();
+        }
 
-    function (err, res) {
+      // }
 
-      if (res.pilotRover === "l") {
-        return pilotRover("l")
-        // console.log(pilotRover("l"))
-
-      } else if (res.pilotRover === "r") {
-        return pilotRover("r")
-      }
-      else if (res.pilotRover === "f") {
-        return pilotRover("f")
-      }
-      else {
-        console.log("this is not a valid .");
-      }
     });
 }
 
