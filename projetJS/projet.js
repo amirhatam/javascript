@@ -11,6 +11,9 @@ var grid = [
   [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "],
   [" ", " ", " ", " ", " ", " ", " ", " ", " ", " "]
 ];
+console.log(grid.join("\n")  +"\n\n")
+// console.table(grid);
+
 
 var rover = {
   direction: "N",
@@ -19,26 +22,26 @@ var rover = {
   travelLog: []
 };
 
-function turnLeft(elem) {
+function turnLeft(robot) {
   switch (rover.direction) {
     case "N":
       rover.direction = "W";
-      console.log("Mars Rover is now West " + rover.direction);
+      console.log("Mars Rover is now facing " + rover.direction);
       break;
 
     case "W":
       rover.direction = "S"
-      console.log("Mars Rover is now South " + rover.direction);
+      console.log("Mars Rover is now facing " + rover.direction);
       break;
 
     case "E":
       rover.direction = "N";
-      console.log("Mars Rover is now Nord " + rover.direction);
+      console.log("Mars Rover is now facing " + rover.direction);
       break;
 
     case "S":
       rover.direction = "E";
-      console.log("Mars Rover is now East " + rover.direction);
+      console.log("Mars Rover is now facing " + rover.direction);
       break;
 
     default:
@@ -50,22 +53,22 @@ function turnRight(elem) {
   switch (rover.direction) {
     case "N":
       rover.direction = "E";
-      console.log("Mars Rover is now East " + rover.direction);
+      console.log("Mars Rover is now facing " + rover.direction);
       break;
 
     case "E":
       rover.direction = "S";
-      console.log("Mars Rover is now South " + rover.direction);
+      console.log("Mars Rover is now facing " + rover.direction);
       break;
 
     case "S":
       rover.direction = "W";
-      console.log("Mars Rover is now West " + rover.direction);
+      console.log("Mars Rover is now facing " + rover.direction);
       break;
 
     case "W":
       rover.direction = "N";
-      console.log("Mars Rover is now North " + rover.direction);
+      console.log("Mars Rover is now facing " + rover.direction);
       break;
   }
 }
