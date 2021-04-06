@@ -1,21 +1,22 @@
+function checkPal(str) {
 
-function checkPal (str) {
+    var splitWord = str.split("");
 
-var letters = str.split("");
+    splitWord.reverse();
+    var joinWord= splitWord.join("")
 
+    // console.log(joinWord);
 
-var revLettres = letters.reverse();
+    if (joinWord == str) {
 
-var revWords = revLettres.join("");
+        console.log("Palindrome !");
+    }
 
-if (revWords === str) {
+    else {
+        console.log("Nope");
+    }
 
-    console.log("Palindrome !");
-} else {
-    console.log("Nope");
 }
 
-
-}
-
-checkPal("anna");
+checkPal("top");
+// checkPal("lol");
