@@ -1,3 +1,5 @@
+// way 1
+
 function secondsToHms(d) {
     d = Number(d);
     var h = Math.floor(d / 3600);
@@ -15,26 +17,27 @@ function secondsToHms(d) {
 secondsToHms(3700);
 
 
-
+// way 2
 
 // function convertHMS(value) {
-//     const sec = parseInt(value, 10); 
-//     let hours   = Math.floor(sec / 3600);
-//     let minutes = Math.floor((sec - (hours * 3600)) / 60);
-//     let seconds = sec - (hours * 3600) - (minutes * 60);
-   
+//     var sec = parseInt(value, 10); 
+
+//     var hours   = Math.floor(sec / 3600);
+//     var minutes = Math.floor((sec - (hours * 3600)) / 60);
+//     var seconds = sec - (hours * 3600) - (minutes * 60);
+    
 //     if (hours   < 10) {hours   = "0"+hours;}
 //     if (minutes < 10) {minutes = "0"+minutes;}
 //     if (seconds < 10) {seconds = "0"+seconds;}
-//     return hours+':'+minutes+':'+seconds; 
+
+//     console.log(hours+':'+minutes+':'+seconds); 
     
 // }
-// console.log(value);
 
 // convertHMS(3700);
 
 
-
+// way 3
 
 // function format(time) {   
    

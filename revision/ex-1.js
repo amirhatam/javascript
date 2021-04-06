@@ -1,31 +1,16 @@
+
 function sortLetters (str) {
 
-var letters = str.split("");
+    var letters = str.split("");;
+
+  var sortLetters = letters.sort().join("")
+    
+    console.log(sortLetters);
 
 
-letters.sort();
 
-
-
-console.log(letters.join(""));
 
 }
 
-sortLetters("konexio");
-
-
-// function sortLetters (word) {
-//     var letters = [];
-
-//     for (var i = 0; i < word.length; i++) {
-
-//         letters.push(word[i]);
-
-//     }
-
-//     console.log(letters.sort().join(""));
-
-// }
-
-// sortLetters("konexio");
+sortLetters("konexio")
 
